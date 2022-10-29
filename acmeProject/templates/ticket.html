@@ -1,0 +1,22 @@
+{%extends 'base.html'%} {%block content%}
+
+<form  method="POST"> {% csrf_token %}
+    <div class="container mt-5">
+        <label>tickets.</label>
+    <div class="mb-3">
+      <label for="subject" class="form-label">subject</label>
+      <input type="text" class="form-control" id="subject" placeholder="subject" name="subject">
+    </div>
+    <div class="mb-3">
+      <label for="body" class="form-label">body</label>
+      <input type="textarea" class="form-control" id="body" placeholder="type here" name="body">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Email address" name="email">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-danger">Submit</button>
+  </div>
+  </form>
+{%endblock content%}

@@ -1,0 +1,40 @@
+{%extends 'base.html'%} {%block content%}
+<form action="/user/" method="POST"> {% csrf_token %}
+    <div class="container m-5">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="First Name" name="username">
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone number</label>
+            <input type="text" class="form-control" id="phone" placeholder="phone number" name="phone ">
+        </div>
+        
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Email address" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="password1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password1" placeholder="Password" name="password1">
+        </div>
+        <div class="mb-3">
+            <label for="Department" class="form-label">Department</label>
+            <input type="text" class="form-control" id="Department" placeholder="Department" name="Department">
+        </div>
+        <div class="mb-3">
+            <label for="role" class="form-label">Role</label>
+            <input type="text" class="form-control" id="role" placeholder="Role" name="Role">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+</form>
+    <h1>{{ object.name }} </h1>  
+  
+    <p>{{ object.description }}</p>  
+    <p>{{ object.last_update }}</p>  
+  
+ 
+{%endblock content%}
